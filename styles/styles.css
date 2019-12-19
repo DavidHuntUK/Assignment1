@@ -49,5 +49,25 @@ img{
 nav{
     font-family: "teko", sans-serif; 
     font-size: 15pt; 
+    text-align: center;
+    padding: 0;
+    
+}
+
+a.Otherpages:link{
+    color: #E4CE75;
+    text-decoration: none;
+
+}
+
+a.Otherpages:visited{
+    color: #92844E;
+    text-decoration: none;
+
+}
+
+a.Otherpages:hover{
+    color: #F8D549;
+    text-decoration: none;
 
 }
