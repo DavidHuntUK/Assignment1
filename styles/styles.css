@@ -1,39 +1,35 @@
 
 /*Universal Margin*/
 * {margin: 1%;
+  
  }
  /* HEADING CSS */
  .heading{
      text-align: center;
-     font-size: 15pt;
-     font-family: 'Teko', sans-serif;
+     font-size: 20pt;
+     font-family: 'Teko', monospace;
+     -webkit-text-stroke: 0.25px black; /* code taken from https://css-tricks.com/adding-stroke-to-web-text/ */
+     color: white;
  }
  /* IMAGE CSS*/
 
-img{
+ .mainimage{
     border-radius: 25%;
 }
-.center{
+.mainprofile{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.70), 0 6px 10px 0 rgba(0, 0, 0, 1.1); 
 
 }
 
  /* BODY CSS */
 
  body{
-     background-color: #f6e6a7 ; 
+     background-color: #f6e6a7 ;
  }
- /* .IntroContianer{
-    
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  
- } */ 
+
  p{
         text-align: center;
         margin: 0;
@@ -44,24 +40,47 @@ img{
 
     }
 
+/* FLEXBOX AND GRID */
+.parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 0.30fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 3 / 1 / 4 / 2; }
+
+/* HEADER CSS */
+/*  \
+     \
+      \
+       \  
+*/
+
+
 /* NAV CSS */
 
-nav{
+ul{
     font-family: "teko", sans-serif; 
     font-size: 15pt; 
     text-align: center;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    overflow: hidden;
     
 }
 
+
 a.Otherpages:link{
-    color: #E4CE75;
+    color: rgb(153, 139, 82);
     text-decoration: none;
 
 }
 
 a.Otherpages:visited{
-    color: #92844E;
+    color: rgb(112, 102, 60);
     text-decoration: none;
 
 }
@@ -71,3 +90,94 @@ a.Otherpages:hover{
     text-decoration: none;
 
 }
+
+/* Icons and Footer Links */
+
+.icons{
+    text-align: center;
+    padding: 0;
+}
+
+
+/* PORTFOLIO PAGE CSS */
+
+:root {
+    font-family: 'Teko', sans-serif;
+    font-size: 75%;
+    }
+hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.7); 
+    } 
+    .PortContain {
+    width: 100%;
+    margin: 2rem auto;
+    }
+    .Portgallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1.5rem;
+        grid-auto-rows: minmax(150px, auto);
+    }
+    .gallery-pic {
+        margin: 1em;
+        max-width: 100%;
+        border-radius: 10%;
+        box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.25);
+        transition: all .3s;
+        overflow: hidden;
+        position: relative;
+    }
+     .gallery-pic:hover .image {
+        filter:grayscale(1);
+    } 
+     .gallery-pic:hover .middle {
+        opacity: 1; 
+    } 
+    .gallery-pic:hover {
+            box-shadow: 0 5px 10px rgba( 0, 0, 0, 1);
+    }
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        object-fit: cover;
+        border-radius: 10%;
+    }
+    .middle{
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .text{
+        color: rgba(255, 255, 255, 0.808);
+        font-size: 4em;
+        padding: 16px 32px;
+        font-family: 'Teko', sans-serif;
+        -webkit-text-stroke: 2px black;
+    }
+ @media (max-width: 500px){
+        .gallery-item,
+        body {
+          /*   max-width: auto; */
+            grid-column: 2;
+            font-family: 'Teko', sans-serif;
+            text-align: left;
+        }
+    
+    
+        div.text {
+            font-size: 2.5em;
+        }
+    }
+
+ /* CV PAGE */
