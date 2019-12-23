@@ -1,6 +1,7 @@
 
 /*Universal Margin*/
 * {margin: 1%;
+
   
  }
  /* HEADING CSS */
@@ -28,6 +29,10 @@
 
  body{
      background-color: #f6e6a7 ;
+     background-image: url("/assets/desert.png");
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
  }
 
  p{
@@ -125,10 +130,12 @@ hr {
         margin: 1em;
         max-width: 100%;
         border-radius: 10%;
-        box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.25);
+        /* box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.25); */
         transition: all .3s;
         overflow: hidden;
-        position: relative;
+        /* position: relative; */
+        display: block;
+        height: auto;
     }
      .gallery-pic:hover .image {
         filter:grayscale(1);
@@ -136,9 +143,9 @@ hr {
      .gallery-pic:hover .middle {
         opacity: 1; 
     } 
-    .gallery-pic:hover {
+    /* .gallery-pic:hover {
             box-shadow: 0 5px 10px rgba( 0, 0, 0, 1);
-    }
+    } */
     .image {
         opacity: 1;
         display: block;
@@ -148,12 +155,13 @@ hr {
         backface-visibility: hidden;
         object-fit: cover;
         border-radius: 10%;
+        display: block;
     }
     .middle{
         transition: .5s ease;
         opacity: 0;
-        position: absolute;
-        top: 50%;
+        position: relative;
+        top: -30%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -161,17 +169,20 @@ hr {
     .text{
         color: rgba(255, 255, 255, 0.808);
         font-size: 4em;
-        padding: 16px 32px;
         font-family: 'Teko', sans-serif;
         -webkit-text-stroke: 2px black;
-    }
+        text-align: center;
+        
+     }  
+
+
  @media (max-width: 500px){
         .gallery-item,
         body {
-          /*   max-width: auto; */
+           max-width: auto;
             grid-column: 2;
             font-family: 'Teko', sans-serif;
-            text-align: left;
+            /* text-align: left; */
         }
     
     
@@ -181,3 +192,109 @@ hr {
     }
 
  /* CV PAGE */
+
+    h2{
+        text-decoration: none;
+        font-size: 35px;
+        -webkit-text-stroke: black 0.1mm;
+        color: white;
+        text-align: center;
+        width: 100%;
+    }
+
+    .CVWriting{
+        text-align: left;
+        font-size: 20px;
+        margin-left: 1em;
+
+        
+    }
+
+    .cvimage{
+        width: 100%;
+        height: auto;
+        border-radius: 100%;
+        border: 3px ridge darkred ;
+            }
+
+    .cvprofile{
+        max-width: 100%;
+        text-align: center;
+    }
+
+
+    .skills{
+        font-size: 18px;
+    }
+
+    .Colname{
+        float: left;
+        margin-left: 1em;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .DofE{
+        float: left;
+        margin-left: 1em;
+        
+        font-weight: bold;
+    }
+
+    .NofCol{
+        float: center;
+        margin-right: 1em;
+        margin-left: auto;
+
+    }
+
+    /* .subheading{
+        float: left;
+        margin-left: 1em;
+        text-decoration: underline;
+        font-weight: bold;
+    } */
+
+    .ThingsLearnt{
+        font-size: 18px;
+        /* margin-top: 27px; */
+
+
+    }
+ /* CV GRID */
+ .CVparent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    
+    .div2 { 
+        grid-area: 1 / 1 / 3 / 2;}
+    .div3 { 
+        grid-area: 7 / 1 / 8 / 6; 
+        /* background-color: rgba(193, 175, 104, 0.2); */
+    }
+    .div4 { 
+        grid-area: 3 / 1 / 7 / 2;
+        background-color: rgba(193, 175, 104, 0.2);
+        border: 1.5px solid black;
+    }
+    .div5 { 
+        grid-area: 1 / 2 / 3 / 6; 
+        background-color: rgba(193, 175, 104, 0.2);
+        border: 1.5px solid black;
+    }
+    .div6 { 
+        grid-area: 3 / 2 / 5 / 6; 
+        background-color: rgba(193, 175, 104, 0.2);
+        border: 1.5px solid black;
+    }
+    .div7 { 
+        grid-area: 5 / 2 / 7 / 6; 
+        background-color: rgba(193, 175, 104, 0.2);
+        border: 1.5px solid black;
+    }
+
