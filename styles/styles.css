@@ -27,6 +27,7 @@
 
  /* BODY CSS */
 
+ /*code help from w3s school */
  body{
      background-color: #f6e6a7 ;
      background-image: url("/assets/desert.png");
@@ -67,6 +68,10 @@
 /* NAV CSS */
 
 ul{
+    margin: 0;
+    padding: 0;
+}
+li{
     font-family: "teko", sans-serif; 
     font-size: 15pt; 
     text-align: center;
@@ -179,7 +184,7 @@ hr {
  @media (max-width: 500px){
         .gallery-item,
         body {
-           max-width: auto;
+           max-width: 100%;
             grid-column: 2;
             font-family: 'Teko', sans-serif;
             /* text-align: left; */
@@ -242,7 +247,7 @@ hr {
     }
 
     .NofCol{
-        float: center;
+        /* float: center; */
         margin-right: 1em;
         margin-left: auto;
 
@@ -258,8 +263,13 @@ hr {
     .ThingsLearnt{
         font-size: 18px;
         /* margin-top: 27px; */
+        text-align: left;
+        margin: 1em;
 
 
+    }
+    .thingsilearned{
+        text-align: left;
     }
  /* CV GRID */
  .CVparent {
@@ -308,4 +318,11 @@ hr {
 
  .form{
      width: 100%;
+     border: 0;
+     padding: 0;
+     overflow: hidden;
+     height: 100%;
+     position: relative;
+     /* width: 600px; */
+     height:900px;
  }
